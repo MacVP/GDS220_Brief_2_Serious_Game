@@ -13,16 +13,18 @@ public class EnemyController : MonoBehaviour
     }
 
     void Update()
-    {
+    {               
         LookAtPlayer();
         MoveToPlayer();
     }
 
+    //Makes enemy always look atr the player
     void LookAtPlayer()
     {
         transform.right = target.transform.position - transform.position;
     }
 
+    //Mkaes the enemy move towards the player
     void MoveToPlayer()
     {
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);

@@ -7,6 +7,8 @@ public class WordManager : MonoBehaviour
     //compiles active words
     public List<Word> words;
 
+    public WordSpawner wordSpawner;
+
     private bool hasActiveWord;
     private Word activeWord;
 
@@ -20,7 +22,7 @@ public class WordManager : MonoBehaviour
     //Adds a word to the Word list
     public void AddWord()
     {
-        Word word = new Word(WordGenerator.GetRandomWord());
+        Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
         Debug.Log(word.word);
 
         words.Add(word);

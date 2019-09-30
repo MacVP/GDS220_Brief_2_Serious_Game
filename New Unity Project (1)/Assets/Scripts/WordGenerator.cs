@@ -10,7 +10,7 @@ public class WordGenerator : MonoBehaviour
                                         "love", "leisure", "tomorrow", "yesterday", "before", "headshot", "music", "sanity", "peace",
                                         "earth", "friend", "husband", "sports", "beer", "house", "dog", "cat", "sin", "saint", "work",
                                         "entertainment", "water", "coffee", "tea", "ocean", "beach", "paradise", "eden", "survival",
-                                        "brains", "shower", "functional", };
+                                        "brains", "shower", "functional", "health", "movies"};
 
 
     //Takes a random word from the list above^ and returns it
