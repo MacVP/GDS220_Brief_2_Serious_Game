@@ -6,8 +6,11 @@ public class WordSpawner : MonoBehaviour
 {
     public GameObject wordPrefab;
     public Transform wordCanvas;
+
     public GameObject enemyPrefab;
     public Transform enemyPos;
+
+    public GameObject[] spawnPoints;
 
     private void Awake()
     {
@@ -16,7 +19,9 @@ public class WordSpawner : MonoBehaviour
 
     public WordDisplay SpawnWord()
     {
-        GameObject wordObject = Instantiate(wordPrefab, wordCanvas);
+        int index = Random.Range(0, 12);
+        Transform startPos = spawnPoints[index].transform;
+        GameObject wordObject = Instantiate(wordPrefab, startPos.transform.position, Quaternion.identity, wordCanvas);
         WordDisplay wordDisplay = wordObject.GetComponent<WordDisplay>();
 
         return wordDisplay;

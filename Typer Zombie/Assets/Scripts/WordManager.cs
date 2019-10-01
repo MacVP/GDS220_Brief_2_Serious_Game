@@ -12,13 +12,6 @@ public class WordManager : MonoBehaviour
     private bool hasActiveWord;
     private Word activeWord;
 
-    private void Start()
-    {
-        AddWord();
-        AddWord();
-        AddWord();
-    }
-
     //Adds a word to the Word list
     public void AddWord()
     {
