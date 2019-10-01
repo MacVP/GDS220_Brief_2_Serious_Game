@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public class Word
 {
     public string word;
     private int typeIndex;
 
+    ScoreManager score;
     WordDisplay display;
 
     public Word (string _word, WordDisplay _display)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WordManager : MonoBehaviour
 {
@@ -8,9 +9,21 @@ public class WordManager : MonoBehaviour
     public List<Word> words;
 
     public WordSpawner wordSpawner;
+    public WordInput wordInput;
 
+    public int penaltyDuration;
+    private Text jammedText;
     private bool hasActiveWord;
     private Word activeWord;
+
+    private void Awake()
+    {
+        jammedText = GameObject.FindGameObjectWithTag("Penalty").GetComponent<Text>();
+    }
+    private void Start()
+    {
+        jammedText.enabled = false;
+    }
 
     //Adds a word to the Word list
     public void AddWord()
@@ -30,7 +43,11 @@ public class WordManager : MonoBehaviour
             {
                 activeWord.TypeLetter();
             }
-            //Remove the letter from the word
+            else
+            {
+                Debug.Log("Penalty Called");
+                Penalty();
+            }
         }
         else
         {
@@ -53,5 +70,16 @@ public class WordManager : MonoBehaviour
         }
     }
 
-    
+    void Penalty()
+    {
+        jammedText.enabled = true;
+        wordInput.penaltyActive = true;
+        Invoke("Deactivate", penaltyDuration);
+    }
+
+    void Deactivate()
+    {
+        jammedText.enabled = false;
+        wordInput.penaltyActive = false;
+    }
 }

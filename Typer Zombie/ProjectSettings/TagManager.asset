@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnemySprite
+  - Penalty
+  - WordManager
   layers:
   - Default
   - TransparentFX
