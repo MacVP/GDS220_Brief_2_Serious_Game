@@ -6,6 +6,13 @@ public class WordDisplay : MonoBehaviour
     public Text text;
     public bool wordActive = false;
 
+    public CharacterController characterController;
+
+    private void Awake()
+    {
+        characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+    }
+
     private void Update()
     {
         HighlightWord();
@@ -32,6 +39,8 @@ public class WordDisplay : MonoBehaviour
     {
         if (wordActive)
         {
+            characterController.target = gameObject;
+            print("Target assigned");
             gameObject.transform.SetAsLastSibling();
         }
     }   

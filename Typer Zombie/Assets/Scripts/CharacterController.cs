@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class CharacterController : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class CharacterController : MonoBehaviour
         }
         else
         {
+            Debug.Log("My name is " + target.gameObject.GetComponent<Text>().text);
             //What is the difference in position?
             Vector3 diff = (target.transform.position - playerSprite.transform.position);
 

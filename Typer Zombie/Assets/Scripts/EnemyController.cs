@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
         sprite = gameObject.transform.Find("Enemy").gameObject;
+        characterController = target.GetComponent<CharacterController>();
     }
 
     void Update()
@@ -41,9 +42,9 @@ public class EnemyController : MonoBehaviour
        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);      
     }
 
-    void PlayerAim()
-    {
-        if
-        characterController.target = sprite;
-    }
+    //void PlayerAim()
+    //{
+    //    if
+    //    characterController.target = sprite;
+    //}
 }

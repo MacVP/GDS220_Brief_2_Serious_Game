@@ -542,6 +542,11 @@ PrefabInstance:
       propertyPath: playerSprite
       value: 
       objectReference: {fileID: 1828380000}
+    - target: {fileID: 3362667458045253230, guid: 701087fdf133687488e5e99f45ff65f7,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 701087fdf133687488e5e99f45ff65f7, type: 3}
 --- !u!1 &519420028
