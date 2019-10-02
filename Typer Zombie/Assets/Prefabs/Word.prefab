@@ -62,6 +62,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  characterController: {fileID: 3362667458045253230, guid: 701087fdf133687488e5e99f45ff65f7,
+    type: 3}
+  sprite: {fileID: 0}
 --- !u!114 &453895483917660591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 453895483917660591}
+  wordActive: 0
 --- !u!1 &7859113096801652264
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,9 @@ public class EnemyController : MonoBehaviour
 {
     public float speed;
     private GameObject target;
-    private GameObject sprite;
+    public CharacterController characterController;
+
+    public GameObject sprite;
 
     void Awake()
     {
@@ -39,5 +41,9 @@ public class EnemyController : MonoBehaviour
        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);      
     }
 
-
+    void PlayerAim()
+    {
+        if
+        characterController.target = sprite;
+    }
 }

@@ -10,6 +10,7 @@ public class WordManager : MonoBehaviour
 
     public WordSpawner wordSpawner;
     public WordInput wordInput;
+    public ScoreManager scoreManager;
 
     public int penaltyDuration;
     private Text jammedText;
@@ -39,7 +40,7 @@ public class WordManager : MonoBehaviour
         if (hasActiveWord)
         {
             //Check if letter is next
-            if(activeWord.GetNextLetter() == letter)
+            if (activeWord.GetNextLetter() == letter)
             {
                 activeWord.TypeLetter();
             }
@@ -67,6 +68,8 @@ public class WordManager : MonoBehaviour
         {
             hasActiveWord = false;
             words.Remove(activeWord);
+            //Add Score
+            scoreManager.AddScore();
         }
     }
 
