@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
         sprite = gameObject.transform.Find("Enemy").gameObject;
-        characterController = target.GetComponent<CharacterController>();
+
     }
 
     void Update()
