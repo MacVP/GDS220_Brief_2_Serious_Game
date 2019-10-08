@@ -7,6 +7,7 @@ TagManager:
   - EnemySprite
   - Penalty
   - WordManager
+  - Zombie
   layers:
   - Default
   - TransparentFX

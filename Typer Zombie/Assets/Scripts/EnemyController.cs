@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float speed;
-    private GameObject target;
-    public CharacterController characterController;
+    public GameObject target;
 
     public GameObject sprite;
 
@@ -41,10 +40,4 @@ public class EnemyController : MonoBehaviour
     {
        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);      
     }
-
-    //void PlayerAim()
-    //{
-    //    if
-    //    characterController.target = sprite;
-    //}
 }

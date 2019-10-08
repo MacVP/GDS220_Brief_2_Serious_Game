@@ -7,6 +7,7 @@ public class WordInput : MonoBehaviour
 {
     public WordManager wordManager;
     public bool penaltyActive;
+    public Animator animator;
 
 
     private void Start()
@@ -21,6 +22,7 @@ public class WordInput : MonoBehaviour
             foreach (char letter in Input.inputString)
             {
                 wordManager.TypeLetter(letter);
+                animator.SetTrigger("Fire");
             }
         }
     }

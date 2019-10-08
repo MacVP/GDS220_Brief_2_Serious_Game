@@ -112,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 453895483917660591}
   wordActive: 0
+  enemy: {fileID: 0}
+  expPos: {fileID: 7352807760891189286}
+  explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   characterController: {fileID: 3362667458045253230, guid: 701087fdf133687488e5e99f45ff65f7,
     type: 3}
 --- !u!1 &7859113096801652264

@@ -6,11 +6,17 @@ public class WordDisplay : MonoBehaviour
     public Text text;
     public bool wordActive = false;
 
+    public Transform enemy;
+    public Transform expPos;
+
+    public GameObject explosionPrefab;
+
     public CharacterController characterController;
 
     private void Awake()
     {
         characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+        expPos = gameObject.GetComponentInParent<Transform>();
     }
 
     private void Update()
@@ -32,6 +38,7 @@ public class WordDisplay : MonoBehaviour
 
     public void RemoveWord()
     {
+        Instantiate(explosionPrefab, expPos.transform.position, Quaternion.identity, enemy);
         Destroy(gameObject);
     }
     
